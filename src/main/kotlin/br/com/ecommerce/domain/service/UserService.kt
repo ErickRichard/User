@@ -9,7 +9,7 @@ class UserService(
     private val userOutPutPort: UserOutPutPort
 ) : CreateUserUseCase, GetUserUseCase {
     override fun createUser(user: User): User {
-        return kotlin.runCatching { userOutPutPort.save(user) }
+        return runCatching { userOutPutPort.save(user) }
             .onFailure { exception -> println("Erro ao salvar usuário: ${exception.message}") }
             .getOrThrow()
     }
