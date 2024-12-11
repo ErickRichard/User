@@ -11,6 +11,13 @@ import java.sql.ResultSet
 class UserRepository(
     private val jdbcClient: JdbcClient
 ) {
+    fun findAll(): List<UserEntity> {
+        return jdbcClient
+            .sql("SELECT top 10 * FROM USERS")
+            .query(UserEntityRowMapper())
+            .list()
+    }
+
     fun findByRegistration(registration: Long): UserEntity {
         return jdbcClient
             .sql("SELECT * FROM USERS WHERE REGISTRATION = :REGISTRATION")

@@ -14,8 +14,12 @@ class UserRestAdapter(
     private val getUserUseCase: GetUserUseCase,
     private val userRestMapper: UserRestMapper
 ) : UserControllerSpec {
-    override fun get(id: Long): UserResponse {
-        return userRestMapper.toUserResponse(getUserUseCase.getUser(id))
+    override fun getAll(): List<UserResponse> {
+        return getUserUseCase.getAll().map { user -> userRestMapper.toUserResponse(user) }
+    }
+
+    override fun getByRegistration(registration: Long): UserResponse {
+        return userRestMapper.toUserResponse(getUserUseCase.getUser(registration))
     }
 
     override fun post(userRequest: UserRequest): UserResponse {

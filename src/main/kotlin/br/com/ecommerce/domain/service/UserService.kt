@@ -14,7 +14,11 @@ class UserService(
             .getOrThrow()
     }
 
-    override fun getUser(id: Long): User {
-        return userOutPutPort.getUserById(id)
+    override fun getUser(registration: Long): User {
+        return userOutPutPort.getUserByRegistration(registration)
+    }
+
+    override fun getAll(): List<User> {
+        return userOutPutPort.getAll()
     }
 }

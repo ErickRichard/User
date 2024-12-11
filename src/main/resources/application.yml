@@ -9,9 +9,9 @@ spring:
     virtual:
       enabled: true
   datasource:
-    url: jdbc:sqlserver://ec2-54-165-28-144.compute-1.amazonaws.com:1433;databaseName=basetesteap;encrypt=false;trustServerCertificate=false
-    username: sa
-    password: Dev@2024
+    url: ${AWS_URL}
+    username: ${AWS_USERNAME}
+    password: ${AWS_PASSWORD}
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa.hibernate.ddl-auto: none
 
