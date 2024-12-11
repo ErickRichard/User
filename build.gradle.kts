@@ -22,15 +22,14 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.mapstruct:mapstruct:1.6.3")
-	kapt("org.mapstruct:mapstruct-processor:1.6.3") // Usar kapt para MapStruct no Kotlin
+	kapt("org.mapstruct:mapstruct-processor:1.6.3")
 	implementation("com.microsoft.sqlserver:mssql-jdbc:12.8.1.jre11")
 
-	// Dependências de testes
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
