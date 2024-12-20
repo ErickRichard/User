@@ -1,4 +1,4 @@
-package br.com.ecommerce.domain.service
+package br.com.ecommerce.application.ports.service
 
 import br.com.ecommerce.application.ports.input.CreateUserUseCase
 import br.com.ecommerce.application.ports.input.GetUserUseCase

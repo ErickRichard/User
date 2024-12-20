@@ -1,7 +1,7 @@
 package br.com.ecommerce.infrastructure.adapters.config
 
 import br.com.ecommerce.application.ports.output.UserOutPutPort
-import br.com.ecommerce.domain.service.UserService
+import br.com.ecommerce.application.ports.service.UserService
 import br.com.ecommerce.infrastructure.adapters.output.persistance.adapter.UserPersistenceAdapter
 import br.com.ecommerce.infrastructure.adapters.output.persistance.mapper.UserMapper
 import br.com.ecommerce.infrastructure.adapters.output.persistance.repository.UserRepository
